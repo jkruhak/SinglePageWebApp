@@ -1,0 +1,11 @@
+<ol>
+    <li ng-repeat="found in narrowItDown.found">
+    	<span>Short Name:</span> {{ found.short_name }} <br>
+	    <span>Name:</span> {{ found.name }} <br>
+        <span>Description:</span> {{ found.description }} <br>
+        <div class="btn-group">
+	        <button class="btn btn-xs btn-info" type="button" ng-click="narrowItDown.onRemove({index: $index});">Don't want this one</button>
+        </div>
+    </li>
+</ol>
+

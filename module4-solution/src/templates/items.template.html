@@ -3,7 +3,7 @@
 <h3>Items in the category: &nbsp; {{ itemDetails.category }}</h3>
 <ol>
 	<li ng-repeat="details in itemDetails.details">
-		<h3>{{ details.name }}</h3>
+		<h3>{{ $index + 1 }}. {{ details.name }}</h3>
 		<div>
 			<span>Item short name:</span> {{ details.short_name }} 
 		</div>

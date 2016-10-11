@@ -2,7 +2,7 @@
 
 <ol>
 	<li ng-repeat="item in categoryList.items">
-		<a ui-sref="items({shortnameId: item.short_name})">{{ item.name }} - ({{ item.short_name }})</a>
+		{{ $index + 1 }}. <a ui-sref="items({shortnameId: item.short_name})">{{ item.name }} - ({{ item.short_name }})</a>
 	</li>
 </ol>
 

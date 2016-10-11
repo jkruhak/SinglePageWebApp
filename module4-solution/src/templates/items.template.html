@@ -1,0 +1,25 @@
+<a ui-sref="home">Home</a> &lt; <a ui-sref="categories">Categories</a> &lt; <span>Items</span>
+
+<h3>Items in the category: &nbsp; {{ itemDetails.category }}</h3>
+<ol>
+	<li ng-repeat="details in itemDetails.details">
+		<h3>{{ details.name }}</h3>
+		<div>
+			<span>Item short name:</span> {{ details.short_name }} 
+		</div>
+		
+		<div>
+			<span>Item description:</span> {{ details.description }}
+		</div>
+		
+		<div>
+			<span ng-hide="details.small_portion_name === null">Portion: <span class="no-bold">{{details.small_portion_name }}</span>&nbsp; &nbsp;</span> 
+			<span ng-hide="details.price_small === null">Price: <span class="no-bold">{{ details.price_small | currency }}</span></span>
+		</div>
+		
+		<div>
+			<span ng-hide="details.large_portion_name === null">Portion: <span class="no-bold">{{details.large_portion_name }}</span> &nbsp;</span>
+			<span ng-hide="details.price_large === null">Price: <span class="no-bold">{{ details.price_large | currency }}</span></span>
+		</div>
+	</li>
+</ol>

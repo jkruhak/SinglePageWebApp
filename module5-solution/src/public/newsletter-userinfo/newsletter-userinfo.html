@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>Your Newsletter Registration Info</h1>
+		<div ng-if="userInfoCtrl.user.firstname">
+			<strong>Full name:</strong> <em>{{ userInfoCtrl.user.firstname }} {{ userInfoCtrl.user.lastname }}</em> <br />
+			<strong>Email:</strong> <em>{{ userInfoCtrl.user.email }}</em> <br />
+			<strong>Phone number:</strong> <em>{{ userInfoCtrl.user.phone }}</em> <br />
+			<strong>Favorite menu item:</strong> <em><span ng-repeat="reg in checkMenuNumber = (userInfoCtrl.user | filter: { short_name: userInfoCtrl.user.favorite } : true )">{{ reg.name }}</span></em>
+		</div>
+		<div ng-if="!userInfoCtrl.user.firstname">
+			You are not signed up yet! <br />
+			<a ui-sref="public.newsletterreg">Sign up now!</a>
+		</div>
+	</div>
+</div>
